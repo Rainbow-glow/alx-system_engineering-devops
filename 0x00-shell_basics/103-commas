@@ -1,2 +1,2 @@
 #!/bin/bash
-ls -a | sed 's/$/, /' |awk '{print $0}
+ls -map
