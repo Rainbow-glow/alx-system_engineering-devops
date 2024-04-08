@@ -2,5 +2,5 @@
 
 exec { 'pkill':
   command => 'pkill killmenow',
-  provider => 'shell'> 'shell',
+  provider => 'shell',
 }
