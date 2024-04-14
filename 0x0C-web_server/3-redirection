@@ -2,11 +2,11 @@
 # Configures an Nginx server so that /redirect_me redirects to another page.
 # The redirection is configured as a "301 Moved Permanently"
 
-ADD301_REDIRECT="\\\rewrite ^/redirect_me https://www.youtube.com/watch?v=QH2-TGUlwu4 premanent;"
+ADD301_REDIRECT="\\\trewrite ^/redirect_me https://www.youtube.com/watch?v=QH2-TGUlwu4 premanent;"
 
 sudo apt-get update
 sudo apt-get install -y nginx
 sudo chown -R ubuntu /var/www
-echo "Hello World!" > /var/www/html/index.nginx-.html
-sudo sed -i "301 $ADD301_REDIRECT" /etc/nginx/sites-available/default
+echo "Hello World!" > /var/www/html/index.nginx- .html
+sudo sed -i "30i $ADD301_REDIRECT" /etc/nginx/sites-available/default
 sudo service nginx restart
